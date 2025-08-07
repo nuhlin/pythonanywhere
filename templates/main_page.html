@@ -25,17 +25,17 @@
 
 
         <div class="container">
+    {% for comment in comments %}
         <div class="row">
-            This is the first dummy comment.
+            {{ comment }}
+        </div>
+    {% endfor %}
+        <div class="row">
+
         </div>
 
         <div class="row">
-            This is the the second dummy comment.  It's no more interesting
-            than the first.
-        </div>
 
-        <div class="row">
-            This is the third dummy comment.  It's actually quite exciting!
         </div>
 
         <div class="row">
