@@ -4,8 +4,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
-        <link rel="stylesheet"
-    href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" 
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" 
     integrity="sha512-
     dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHube
     NikyKGVyQ==" crossorigin="anonymous">
@@ -31,6 +30,12 @@ page</a>
             </div>
         </nav>
         <div class="container">
+            
+            {% if error %} 
+                <div class="alert alert-warning" role="alert"> 
+                    Incorrect username or password 
+                </div> 
+            {% endif %}
             
             <div class="row">
                 <form action="." method="POST">
