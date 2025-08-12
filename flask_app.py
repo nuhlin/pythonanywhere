@@ -47,6 +47,9 @@ def load_user(user_id):
 
 class Comment(db.Model):
 
+    commenter_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=True)
+    commenter = db.relationship('User', foreign_keys=commenter_id)
+
     __tablename__ = "comments"
 
     id = db.Column(db.Integer, primary_key=True)
@@ -61,7 +64,7 @@ def index():
     if not current_user.is_authenticated:
         return redirect(url_for('index'))
 
-    comment = Comment(content=request.form["contents"])
+    comment = Comment(content=request.form["contents"], commenter=current_user)
     db.session.add(comment)
     db.session.commit()
     return redirect(url_for('index'))
