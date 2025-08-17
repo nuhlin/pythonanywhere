@@ -1,15 +1,47 @@
 <html>
     <head>
+
+        <style>
+            .navbar-lilac {
+                background-color: #C8A2C8;
+                border-color: #B08BB0;
+            }
+
+            .navbar-lilac .navbar-brand,
+            .navbar-lilac .navbar-nav > li > a {
+                color: #800080; /* Classic purple */
+            }
+
+            .navbar-lilac .navbar-brand:hover,
+            .navbar-lilac .navbar-nav > li > a:hover {
+                color: #FFDDEE; /* soft pinkish hover */
+            }
+
+             .comment-content {
+                color: #663399;
+                font-size: 16px;
+                font-weight: 500;
+            }
+
+            .comment-meta {
+                color: #9400D3; /* Dark Violet */
+                font-size: 13px;
+                font-style: italic;
+                margin-top: 4px;
+            }
+        </style>
+
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
         <title>Ulin's Portfolio</title>
+
     </head>
 
     <body>
-        <nav class="navbar navbar-inverse">
+        <nav class="navbar navbar-lilac">
             <div class="container">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -19,6 +51,8 @@
                         <span class="icon-bar"></span>
                     </button>
                     <a class="navbar-brand" href="#">Ulin's Portfolio</a>
+                    <a class="navbar-brand" href="{{ url_for('profile') }}" class="btn btn-primary navbar-btn" style="margin-left: 15px;">Profile Page</a>
+                    <a class="navbar-brand" href="{{ url_for('index') }}" class="btn btn-default navbar-btn" style="margin-left: 10px;">Comments</a>
                 </div>
                 <ul class="nav navbar-nav navbar-right">
                         {% if current_user.is_authenticated %}
@@ -34,10 +68,10 @@
         <div class="container">
     {% for comment in comments %}
         <div class="row" style="margin-bottom: 1ex">
-            <div>
-            {{ comment.content }}
+            <div class="comment-content">
+                {{ comment.content }}
         </div>
-        <div>
+        <div class="comment-meta">
             <small>
                 Posted
                 {% if comment.posted %}

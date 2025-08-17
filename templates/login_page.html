@@ -1,5 +1,60 @@
 <html>
     <head>
+
+        <style>
+            .navbar-lilac {
+                background-color: #C8A2C8;
+                border-color: #B08BB0;
+            }
+
+            .navbar-lilac .navbar-brand,
+            .navbar-lilac .navbar-nav > li > a {
+                color: #800080; /* Classic purple */
+            }
+
+            .navbar-lilac .navbar-brand:hover,
+            .navbar-lilac .navbar-nav > li > a:hover {
+                color: #FFDDEE; /* soft pinkish hover */
+            }
+
+             .comment-content {
+                color: #663399;
+                font-size: 16px;
+                font-weight: 500;
+            }
+
+            .lilac-input {
+                border: 1px solid #B08BB0;
+                background-color: #F3E5F5; /* Light lilac background */
+                color: #4B0082; /* Deep lilac text */
+            }
+
+            .lilac-input:focus {
+                border-color: #800080; /* Deeper purple on focus */
+                outline: none;
+                box-shadow: 0 0 5px rgba(128, 0, 128, 0.5);
+            }
+
+            .lilac-label {
+                color: #800080; /* Match navbar text */
+                font-weight: 500;
+            }
+
+            .lilac-button {
+                background-color: #C8A2C8;
+                border: 1px solid #B08BB0;
+                color: white;
+                font-weight: bold;
+            }
+
+            .lilac-button:hover {
+                background-color: #B08BB0;
+                color: #FFF0F5; /* Light lavender hover text */
+            }
+
+        </style>
+
+
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,7 +68,7 @@
     </head>
 
     <body>
-        <nav class="navbar navbar-inverse">
+        <nav class="navbar navbar-lilac">
             <div class="container">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed"
@@ -40,17 +95,14 @@ page</a>
             <div class="row">
                 <form action="." method="POST">
                     <div class="form-group">
-                        <label for="username">Username:</label>
-                        <input class="form-control" id="username" name="username"
-placeholder="Enter your username">
+                        <label for="username" class="lilac-label">Username:</label>
+                        <input class="form-control lilac-input" id="username" name="username" placeholder="Enter your username">
                     </div>
                     <div class="form-group">
-                        <label for="password">Password:</label>
-                        <input type="password" class="form-control" id="password"
-name="password" placeholder="Enter your password">
+                        <label for="password" class="lilac-label">Password:</label>
+        <input type="password" class="form-control lilac-input" id="password" name="password" placeholder="Enter your password">
                     </div>
-                    <button type="submit" class="btn btn-success">Log
-in</button>
+                    <button type="submit" class="btn lilac-button">Log in</button>
                </form>
             </div>
 

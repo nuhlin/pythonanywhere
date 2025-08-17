@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style>
+            .navbar-lilac {
+                background-color: #C8A2C8;
+                border-color: #B08BB0;
+            }
+        
+            .navbar-lilac .navbar-brand,
+            .navbar-lilac .navbar-nav > li > a {
+                color: #800080; /* Classic purple */
+            }
+        
+            .navbar-lilac .navbar-brand:hover,
+            .navbar-lilac .navbar-nav > li > a:hover {
+                color: #FFDDEE; /* soft pinkish hover */
+            }
+        </style>
+    
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+        <title>Ulin's Portfolio</title>
+    <head>
+    
+    <body>
+        <nav class="navbar navbar-lilac">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Ulin's Portfolio</a>
+                    <a class="navbar-brand" href="{{ url_for('profile') }}" class="btn btn-primary navbar-btn" style="margin-left: 15px;">Profile Page</a>
+                    <a class="navbar-brand" href="{{ url_for('index') }}" class="btn btn-default navbar-btn" style="margin-left: 10px;">Comments</a>
+                </div>
+                <ul class="nav navbar-nav navbar-right">
+                        {% if current_user.is_authenticated %}
+                            <li><a href="{{ url_for('logout') }}">Log out</a></li>
+                        {% else %}
+                            <li><a href="{{ url_for('login') }}">Log in</a></li>
+                        {% endif %}
+                </ul>
+            </div>
+        </nav>
+    
+    <meta charset="UTF-8">
+    <title>Ulin's Profile</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            text-align: center;
+        }
+
+        .profile-photo {
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid #DA70D6; /* Orchid */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            margin-top: 20px;
+            color: #333;
+        }
+
+        .linkedin-link {
+            display: inline-block;
+            margin-top: 15px;
+            text-decoration: none;
+            color: white;
+            background-color: #663399;
+            padding: 10px 20px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+
+        .linkedin-link:hover {
+            background-color: #005f8d;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Profile Photo -->
+    <img src="{{ url_for('static', filename='img/ulin_photo.jpg') }}" alt="Ulin's Photo" class="profile-photo">
+
+    <!-- Name or Title -->
+    <h1>Hi, I'm Ulin!</h1>
+
+    <!-- LinkedIn Button -->
+    <a class="linkedin-link" href="https://www.linkedin.com/in/ulin-nuha-b820371b6/" target="_blank">
+        Visit my LinkedIn
+    </a>
+
+</body>
+</html>
+
+
