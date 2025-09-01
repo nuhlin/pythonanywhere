@@ -10,12 +10,8 @@ from datetime import datetime
 
 app = Flask(__name__)
 app.config["DEBUG"] = True
-SQLALCHEMY_DATABASE_URI = "mysql+mysqlconnector://{username}:{password}@{hostname}/{databasename}".format(
-    username="ulinnuha",
-    password="ultra2003",
-    hostname="ulinnuha.mysql.pythonanywhere-services.com",
-    databasename="ulinnuha$comments",
-)
+SQLALCHEMY_DATABASE_URI = "sqlite:///comments.db"
+
 app.config["SQLALCHEMY_DATABASE_URI"] = SQLALCHEMY_DATABASE_URI
 app.config["SQLALCHEMY_POOL_RECYCLE"] = 299
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
