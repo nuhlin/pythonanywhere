@@ -93,3 +93,7 @@ def logout():
 @app.route("/profile")
 def profile():
     return render_template("profile_page.html")
+
+@app.route("/game")
+def game():
+    return render_template("game_page.html")

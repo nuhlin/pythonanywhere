@@ -6,26 +6,26 @@
                 background-color: #C8A2C8;
                 border-color: #B08BB0;
             }
-        
+
             .navbar-lilac .navbar-brand,
             .navbar-lilac .navbar-nav > li > a {
                 color: #800080; /* Classic purple */
             }
-        
+
             .navbar-lilac .navbar-brand:hover,
             .navbar-lilac .navbar-nav > li > a:hover {
                 color: #FFDDEE; /* soft pinkish hover */
             }
         </style>
-    
+
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
-        <title>Ulin's Portfolio</title>
-    <head>
-    
+        <title>Ulin Nuha's</title>
+
+
     <body>
         <nav class="navbar navbar-lilac">
             <div class="container">
@@ -36,9 +36,10 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">Ulin's Portfolio</a>
+                    <a class="navbar-brand" href="#">Ulin Nuha's</a>
                     <a class="navbar-brand" href="{{ url_for('profile') }}" class="btn btn-primary navbar-btn" style="margin-left: 15px;">Profile Page</a>
                     <a class="navbar-brand" href="{{ url_for('index') }}" class="btn btn-default navbar-btn" style="margin-left: 10px;">Comments</a>
+                    <a class="navbar-brand" href="{{ url_for('game') }}" class="btn btn-default navbar-btn" style="margin-left: 10px;">Game</a>
                 </div>
                 <ul class="nav navbar-nav navbar-right">
                         {% if current_user.is_authenticated %}
@@ -49,7 +50,7 @@
                 </ul>
             </div>
         </nav>
-    
+
     <meta charset="UTF-8">
     <title>Ulin's Profile</title>
     <style>
@@ -88,6 +89,10 @@
             background-color: #005f8d;
         }
     </style>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
 </head>
 <body>
 
@@ -97,9 +102,10 @@
     <!-- Name or Title -->
     <h1>Hi, I'm Ulin!</h1>
 
-    <!-- LinkedIn Button -->
-    <a class="linkedin-link" href="https://www.linkedin.com/in/ulin-nuha-b820371b6/" target="_blank">
-        Visit my LinkedIn
+    <!-- LinkedIn Link -->
+    <a href="https://www.linkedin.com/in/ulin-nuha-b820371b6/" target="_blank" style="color: #663399; font-weight: bold;">
+        <i class="fab fa-linkedin" style="margin-right: 8px;"></i>
+        https://www.linkedin.com/in/ulin-nuha-b820371b6/
     </a>
 
 </body>

@@ -1,0 +1,35 @@
+[33mcommit c71f2d7be941f29203fe644dc69ed82a730810b7[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: Ulin Nuha <nuha.ulin@gmail.com>
+Date:   Thu Aug 7 06:18:48 2025 +0000
+
+    Added a model
+
+[33mcommit e97eff8dae023660715faff7dcdbb2bc733a27c2[m
+Author: Ulin Nuha <nuha.ulin@gmail.com>
+Date:   Thu Aug 7 05:09:19 2025 +0000
+
+    Connected to database
+
+[33mcommit 264b47b87843af7aa752fa7ecbb0f05568bcf4c4[m
+Author: Ulin Nuha <nuha.ulin@gmail.com>
+Date:   Thu Aug 7 03:41:32 2025 +0000
+
+    Replaced dummy comments with some in-memory storage
+
+[33mcommit 7f283b5cdaecc7622b9e3479fd3db31b384e214f[m
+Author: Ulin Nuha <nuha.ulin@gmail.com>
+Date:   Thu Aug 7 03:25:53 2025 +0000
+
+    Made the site prettier.
+
+[33mcommit fcac947f62c298ccb9dc72c01b7fc661b7456cd6[m
+Author: Ulin Nuha <nuha.ulin@gmail.com>
+Date:   Thu Aug 7 03:05:01 2025 +0000
+
+    A first cut at the template
+
+[33mcommit e4c69563a4fa9e0ac6539525d1188eee59080a27[m
+Author: Ulin Nuha <nuha.ulin@gmail.com>
+Date:   Thu Aug 7 02:40:37 2025 +0000
+
+    First commit of a really simple web app, with a .gitignore file

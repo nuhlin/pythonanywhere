@@ -36,7 +36,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
-        <title>Ulin's Portfolio</title>
+        <title>Ulin Nuha's</title>
 
     </head>
 
@@ -50,9 +50,10 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">Ulin's Portfolio</a>
+                    <a class="navbar-brand" href="#">Ulin Nuha's</a>
                     <a class="navbar-brand" href="{{ url_for('profile') }}" class="btn btn-primary navbar-btn" style="margin-left: 15px;">Profile Page</a>
                     <a class="navbar-brand" href="{{ url_for('index') }}" class="btn btn-default navbar-btn" style="margin-left: 10px;">Comments</a>
+                    <a class="navbar-brand" href="{{ url_for('game') }}" class="btn btn-default navbar-btn" style="margin-left: 10px;">Game</a>
                 </div>
                 <ul class="nav navbar-nav navbar-right">
                         {% if current_user.is_authenticated %}
